@@ -1,0 +1,25 @@
+{
+  "name": "dapplet-deployer",
+  "version": "0.1.0",
+  "description": "The tooling for deployment of dapplet modules to registries.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dapplets/dapplet-deployer.git"
+  },
+  "keywords": [
+    "dapplet",
+    "module",
+    "registry",
+    "deploy"
+  ],
+  "author": "Dapplets Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dapplets/dapplet-deployer/issues"
+  },
+  "homepage": "https://github.com/dapplets/dapplet-deployer#readme"
+}
