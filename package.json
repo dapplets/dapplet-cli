@@ -1,9 +1,14 @@
 {
   "name": "@dapplets/dapplet-deployer",
   "version": "0.1.0",
+  "author": "Dapplets Team",
   "description": "The tooling for deployment of dapplet modules to registries.",
-  "main": "./lib/index.js",
+  "bin": {
+    "dapplet-deployer": "./bin/dapplet-deployer"
+  },
+  "main": "./lib/dapplet-deployer.js",
   "scripts": {
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -15,10 +20,15 @@
     "registry",
     "deploy"
   ],
-  "author": "Dapplets Team",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dapplets/dapplet-deployer/issues"
   },
-  "homepage": "https://github.com/dapplets/dapplet-deployer#readme"
+  "homepage": "https://github.com/dapplets/dapplet-deployer#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "commander": "^2.20.0",
+    "form-data": "^2.5.0",
+    "node-fetch": "^2.6.0"
+  }
 }
