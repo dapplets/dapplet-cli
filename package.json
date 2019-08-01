@@ -1,10 +1,9 @@
 {
-  "name": "dapplet-deployer",
+  "name": "@dapplets/dapplet-deployer",
   "version": "0.1.0",
   "description": "The tooling for deployment of dapplet modules to registries.",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
