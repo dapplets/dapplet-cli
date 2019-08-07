@@ -26,8 +26,8 @@ Commands:
   add-site <hostname>      add site-binding
 ```
 
-## Example
-Run `dapplet-cli` from the project root directory containing a manifest.json file.
+## Examples
+Run `dapplet-cli` from a project root directory containing a manifest.json file.
 
 ### Deploy package to registry
 ```
