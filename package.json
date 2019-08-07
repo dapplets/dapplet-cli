@@ -1,18 +1,18 @@
 {
-  "name": "@dapplets/dapplet-deployer",
+  "name": "@dapplets/cli",
   "version": "0.1.0",
   "author": "Dapplets Team",
   "description": "The tooling for deployment of dapplet modules to registries.",
   "bin": {
-    "dapplet-deployer": "./bin/dapplet-deployer"
+    "dapplet-cli": "./bin/dapplet-cli"
   },
-  "main": "./lib/dapplet-deployer.js",
+  "main": "./lib/dapplet-cli.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dapplets/dapplet-deployer.git"
+    "url": "git+https://github.com/dapplets/dapplet-cli.git"
   },
   "keywords": [
     "dapplet",
@@ -22,9 +22,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dapplets/dapplet-deployer/issues"
+    "url": "https://github.com/dapplets/dapplet-cli/issues"
   },
-  "homepage": "https://github.com/dapplets/dapplet-deployer#readme",
+  "homepage": "https://github.com/dapplets/dapplet-cli#readme",
   "devDependencies": {},
   "dependencies": {
     "commander": "^2.20.0",

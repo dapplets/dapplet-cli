@@ -2,7 +2,7 @@
 
 const program = require('commander');
 const pkg = require('../package.json');
-const dd = require('../lib/dapplet-deployer');
+const dd = require('../lib/dapplet-cli');
 
 program
     .version(pkg.version)
