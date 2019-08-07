@@ -2,7 +2,7 @@
 
 const program = require('commander');
 const pkg = require('../package.json');
-const dd = require('../lib/dapplet-cli');
+const cli = require('../lib/dapplet-cli');
 
 program
     .version(pkg.version)
@@ -11,13 +11,20 @@ program
 
 program
     .command('deploy')
+    .option('-A, --archive', 'publish archive modules from "archive" folder')
     .description('run deploy of module to registry')
     .action(async function (options) {
-        if (!program.account) return console.error("account is required");
-        if (!program.key) return console.error("account is required");
+        let account = program.account || process.env.DAPPLET_CLI_ACCOUNT;
+        let key = program.key || process.env.DAPPLET_CLI_KEY;
+
+        if (!account) return console.error("account is required");
+        if (!key) return console.error("key is required");
+
+        account = account.trim();
+        key = key.trim();
 
         try {
-            await dd.deploy(program.account, program.key);
+            await cli.deploy(account, key, options);
         } catch (err) {
             console.error(err.message);
         }
@@ -27,12 +34,18 @@ program
     .command('add-site <hostname>')
     .description('add site-binding')
     .action(async function (hostname, options) {
-        if (!program.account) return console.error("account is required");
-        if (!program.key) return console.error("account is required");
+        let account = program.account || process.env.DAPPLET_CLI_ACCOUNT;
+        let key = program.key || process.env.DAPPLET_CLI_KEY;
+
+        if (!account) return console.error("account is required");
+        if (!key) return console.error("key is required");
         if (!hostname) return console.error("hostname is required");
+        
+        account = account.trim();
+        key = key.trim();
 
         try {
-            await dd.addSite(program.account, program.key, hostname);
+            await cli.addSite(account, key, hostname);
         } catch (err) {
             console.error(err.message);
         }
