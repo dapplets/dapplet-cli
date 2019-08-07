@@ -7,9 +7,7 @@
     "dapplet-cli": "./bin/dapplet-cli"
   },
   "main": "./lib/dapplet-cli.js",
-  "scripts": {
-    "test": "mocha"
-  },
+  "scripts": { },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dapplets/dapplet-cli.git"
