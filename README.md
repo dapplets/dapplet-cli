@@ -44,6 +44,11 @@ Run `dapplet-cli` from a project root directory containing a manifest.json file.
 $ dapplet-cli -a test -k testkey deploy
 ```
 
+Parameters `--account` and `--key` can be filled using environment variables `DAPPLET_CLI_ACCOUNT` and `DAPPLET_CLI_KEY`, respectively:
+```
+$ set DAPPLET_CLI_ACCOUNT=test && set DAPPLET_CLI_KEY=testkey && dapplet-cli deploy
+```
+
 ### Deploy package with archive modules to registry
 ```
 $ dapplet-cli -a test -k testkey deploy --archive
