@@ -6,6 +6,7 @@ const cli = require('../lib/dapplet-cli');
 
 program
     .version(pkg.version)
+    .option('-r, --registry [address]', 'set the registry endpoint address. default: https://test.dapplets.org')
     .option('-a, --account <account>', 'set the account name')
     .option('-k, --key <key>', 'set the account key');
 
@@ -14,17 +15,19 @@ program
     .option('-A, --archive', 'publish archive modules from "archive" folder')
     .description('run deploy of module to registry')
     .action(async function (options) {
+        let registry = program.registry || process.env.DAPPLET_CLI_REGISTRY || "https://test.dapplets.org";
         let account = program.account || process.env.DAPPLET_CLI_ACCOUNT;
         let key = program.key || process.env.DAPPLET_CLI_KEY;
 
         if (!account) return console.error("account is required");
         if (!key) return console.error("key is required");
 
+        registry = registry.trim();
         account = account.trim();
         key = key.trim();
 
         try {
-            await cli.deploy(account, key, options);
+            await cli.deploy(registry, account, key, options);
         } catch (err) {
             console.error(err.message);
         }
@@ -34,18 +37,20 @@ program
     .command('add-site <hostname>')
     .description('add site-binding')
     .action(async function (hostname, options) {
+        let registry = program.registry || process.env.DAPPLET_CLI_REGISTRY || "https://test.dapplets.org";
         let account = program.account || process.env.DAPPLET_CLI_ACCOUNT;
         let key = program.key || process.env.DAPPLET_CLI_KEY;
 
         if (!account) return console.error("account is required");
         if (!key) return console.error("key is required");
         if (!hostname) return console.error("hostname is required");
-        
+
+        registry = registry.trim();
         account = account.trim();
         key = key.trim();
 
         try {
-            await cli.addSite(account, key, hostname);
+            await cli.addSite(registry, account, key, hostname);
         } catch (err) {
             console.error(err.message);
         }

@@ -17,6 +17,7 @@ Usage: dapplet-cli [options] [command]
 
 Options:
   -V, --version            output the version number
+  -r, --registry [address] set the registry endpoint address. default: https://test.dapplets.org
   -a, --account <account>  set the account name
   -k, --key <key>          set the account key
   -h, --help               output usage information
@@ -39,14 +40,21 @@ Options:
 ## Examples
 Run `dapplet-cli` from a project root directory containing a manifest.json file.
 
+The following global parameters can be filled using environment variables:
+
+| Parameter | Environment Variable |
+| --------- | -------------------- |
+| `-r, --registry` | `DAPPLET_CLI_REGISTRY` |
+| `-a, --account` | `DAPPLET_CLI_ACCOUNT` |
+| `-k, --key` | `DAPPLET_CLI_KEY` |
+
+```
+$ set DAPPLET_CLI_REGISTRY=https://test.dapplets.org && set DAPPLET_CLI_ACCOUNT=test && set DAPPLET_CLI_KEY=testkey && dapplet-cli deploy
+```
+
 ### Deploy package to registry
 ```
 $ dapplet-cli -a test -k testkey deploy
-```
-
-Parameters `--account` and `--key` can be filled using environment variables `DAPPLET_CLI_ACCOUNT` and `DAPPLET_CLI_KEY`, respectively:
-```
-$ set DAPPLET_CLI_ACCOUNT=test && set DAPPLET_CLI_KEY=testkey && dapplet-cli deploy
 ```
 
 ### Deploy package with archive modules to registry
