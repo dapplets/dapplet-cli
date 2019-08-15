@@ -48,6 +48,7 @@ The following global parameters can be filled using environment variables:
 | `-a, --account` | `DAPPLET_CLI_ACCOUNT` |
 | `-k, --key` | `DAPPLET_CLI_KEY` |
 
+Example of Windows command line:
 ```
 $ set DAPPLET_CLI_REGISTRY=https://test.dapplets.org && set DAPPLET_CLI_ACCOUNT=test && set DAPPLET_CLI_KEY=testkey && dapplet-cli deploy
 ```
