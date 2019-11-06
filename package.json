@@ -27,6 +27,7 @@
   "dependencies": {
     "commander": "^2.20.0",
     "form-data": "^2.5.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "stream-to-array": "^2.3.0"
   }
 }

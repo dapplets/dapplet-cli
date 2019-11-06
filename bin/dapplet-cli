@@ -13,6 +13,7 @@ program
 program
     .command('deploy')
     .option('-A, --archive', 'publish archive modules from "archive" folder')
+    .option('-S, --swarm', 'save modules to Swarm')
     .description('run deploy of module to registry')
     .action(async function (options) {
         let registry = program.registry || process.env.DAPPLET_CLI_REGISTRY || "https://test.dapplets.org";
