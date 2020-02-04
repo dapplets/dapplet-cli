@@ -13,7 +13,7 @@ npm install --save-dev @dapplets/cli
 
 ## Usage
 ```
-Usage: dapplet-cli [options] [command]
+Usage: dapplet [options] [command]
 
 Options:
   -V, --version            output the version number
@@ -39,7 +39,7 @@ Options:
 ```
 
 ## Examples
-Run `dapplet-cli` from a project root directory containing a manifest.json file.
+Run `dapplet` from a project root directory containing a manifest.json file.
 
 The following global parameters can be filled using environment variables:
 
@@ -51,17 +51,22 @@ The following global parameters can be filled using environment variables:
 
 Example of Windows command line:
 ```
-$ set DAPPLET_CLI_REGISTRY=https://test.dapplets.org && set DAPPLET_CLI_ACCOUNT=test && set DAPPLET_CLI_KEY=testkey && dapplet-cli deploy
+$ set DAPPLET_CLI_REGISTRY=https://test.dapplets.org && set DAPPLET_CLI_ACCOUNT=test && set DAPPLET_CLI_KEY=testkey && dapplet deploy
+```
+
+### Generate new module
+```
+$ dapplet create
 ```
 
 ### Deploy package to registry
 ```
-$ dapplet-cli -a test -k testkey deploy
+$ dapplet -a test -k testkey deploy
 ```
 
 ### Deploy package with archive modules to registry
 ```
-$ dapplet-cli -a test -k testkey deploy --archive
+$ dapplet -a test -k testkey deploy --archive
 ```
 
 Archive modules will be loaded from `archive` subfolder of root project folder. An `archive` directory must contain folders with the version name containing a manifest and module script. 
@@ -79,5 +84,5 @@ $/
 
 ### Add site-binding
 ```
-$ dapplet-cli -a test -k testkey add-site example.com
+$ dapplet -a test -k testkey add-site example.com
 ```
