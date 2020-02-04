@@ -25,6 +25,7 @@ Options:
 Commands:
   deploy                   run deploy of module to registry
   add-site <hostname>      add site-binding
+  create                   create new module
 ```
 
 ```
