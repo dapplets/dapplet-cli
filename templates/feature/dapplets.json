@@ -1,0 +1,14 @@
+{
+    "hostnames": {
+        "<%= hostname %>": {
+            "<%= projectName %>": "0.0.1"
+        }
+    },
+    "modules": {
+        "<%= projectName %>": {
+            "default": {
+                "0.0.1": "manifest.json"
+            }
+        }
+    }
+}

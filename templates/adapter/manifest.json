@@ -1,0 +1,11 @@
+{
+    "name": "<%= projectName %>",
+    "branch": "default",
+    "version": "0.0.1",
+    "type": "ADAPTER",
+    "title": "<%= title %>",
+    "description": "<%= description %>",
+    "author": "<%= author %>",
+    "dist": "lib/index.js",
+    "dependencies": {}
+}

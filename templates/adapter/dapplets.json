@@ -1,0 +1,9 @@
+{
+    "modules": {
+        "<%= projectName %>": {
+            "default": {
+                "0.0.1": "manifest.json"
+            }
+        }
+    }
+}
