@@ -4,7 +4,6 @@ export interface IButtonState {
     label: string;
     exec: (ctx: any, me: IButtonState) => void;
     init: () => void;
-    clazz: string;
     ctx: any;
 }
 
