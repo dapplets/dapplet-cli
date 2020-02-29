@@ -46,12 +46,4 @@ export default class Adapter {
     public detachFeature(feature: IFeature): void {
         this.adapter.detachFeature(feature);
     }
-
-    public onContextCreated(handler: (ctx?: any, insertionPoint?: string) => void): void {
-        this.adapter.onContextCreated(handler);
-    }
-
-    public onContextDestroyed(handler: (ctx?: any, insertionPoint?: string) => void): void {
-        this.adapter.onContextDestroyed(handler);
-    }
 }
