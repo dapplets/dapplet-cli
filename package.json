@@ -1,6 +1,6 @@
 {
   "name": "@dapplets/cli",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "author": "Dapplets Team",
   "description": "The tooling for deployment of dapplet modules to registries.",
   "bin": {
@@ -27,6 +27,7 @@
   "dependencies": {
     "commander": "^2.20.0",
     "ejs": "^3.0.1",
+    "ethers": "^4.0.47",
     "form-data": "^2.5.0",
     "inquirer": "^7.0.4",
     "node-fetch": "^2.6.0",
